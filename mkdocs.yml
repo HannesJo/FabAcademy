@@ -1,4 +1,35 @@
-site_name: My FabAcademy Journey
-site_url: https://hannesjo.github.io/FabAcademy/
-theme: 
-  name: material
+site_name: Pre Fab Academy
+
+theme:
+  name: material 
+  features:
+    - header.autohide
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+
+  palette:
+    primary: blue grey
+   
+  features:
+      - navigation.tracking
+
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite:
+  - pymdownx.snippets
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
