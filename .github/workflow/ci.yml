@@ -4,6 +4,8 @@ on:
     branches:
       - master 
       - main
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -12,5 +14,8 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
+      - uses: actions/cache@v2
+        key: ${{ github.ref}}
+        path: .cache
       - run: pip install mkdocs-material 
       - run: mkdocs gh-deploy --force
